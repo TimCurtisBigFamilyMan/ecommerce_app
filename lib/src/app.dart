@@ -3,7 +3,7 @@ import 'package:ecommerce_app/src/routing/app_router.dart';
 import 'package:flutter/material.dart';
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
         ),
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
-            primary: Colors.black, // background (button) color
+            backgroundColor: Colors.black, // background (button) color
             onPrimary: Colors.white, // foreground (text) color
           ),
         ),

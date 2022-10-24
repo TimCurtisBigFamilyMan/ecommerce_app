@@ -12,7 +12,7 @@ import '../../../../utils/async_value_ui.dart';
 
 /// Simple account screen showing some user info and a logout button.
 class AccountScreen extends ConsumerWidget {
-  const AccountScreen({Key? key}) : super(key: key);
+  const AccountScreen({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -60,7 +60,7 @@ class AccountScreen extends ConsumerWidget {
 
 /// Simple user data table showing the uid and email
 class UserDataTable extends ConsumerWidget {
-  const UserDataTable({Key? key}) : super(key: key);
+  const UserDataTable({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

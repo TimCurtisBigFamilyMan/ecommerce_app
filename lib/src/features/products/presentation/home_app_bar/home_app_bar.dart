@@ -17,7 +17,7 @@ import '../../../authentication/data/fake_auth_repository.dart';
 /// - Orders button
 /// - Account or Sign-in button
 class HomeAppBar extends ConsumerWidget with PreferredSizeWidget {
-  const HomeAppBar({Key? key}) : super(key: key);
+  const HomeAppBar({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
