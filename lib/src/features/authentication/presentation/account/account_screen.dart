@@ -32,6 +32,8 @@ class AccountScreen extends ConsumerWidget {
             onPressed: state.isLoading
                 ? null
                 : () async {
+                    // get the navigator before the async gap
+                    final navigator = Navigator.of(context);
                     final logout = await showAlertDialog(
                       context: context,
                       title: 'Are you sure?'.hardcoded,
@@ -39,12 +41,17 @@ class AccountScreen extends ConsumerWidget {
                       defaultActionText: 'Logout'.hardcoded,
                     );
                     if (logout == true) {
-                      final success = await ref
+                      // since I no longer need to check for success I can also not wait for it.
+                      // final success = await ref
+                      //     .read(accountScreenControllerProvider.notifier)
+                      //     .signOut();
+                      ref
                           .read(accountScreenControllerProvider.notifier)
                           .signOut();
-                      if (success) {
-                        Navigator.of(context).pop();
-                      }
+                      // Code below not necessary because refreshListenable and redirect properties of AppRouter now do this.
+                      // if (success) {
+                      //   navigator.pop(); // use the navigator here
+                      // }
                     }
                   },
           ),
